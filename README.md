@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/FACG4/gsg_narrowcast.svg?branch=master)](https://travis-ci.org/FACG4/gsg_narrowcast)
 # GSG_Narrowcast:
 An app that allows you to quickly and effortlessly learn about all upcoming events held in GSG as well as understand what GSG does as an entity, what their main programs are and whether they interest you.
 
