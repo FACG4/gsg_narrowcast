@@ -4,7 +4,6 @@
   "description": "GSG Narrowcast",
   "main": "index.js",
   "scripts": {
-    "test": "test"
   },
   "repository": {
     "type": "git",
