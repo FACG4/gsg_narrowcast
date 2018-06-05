@@ -1,0 +1,19 @@
+{
+  "name": "gsg_narrowcast",
+  "version": "1.0.0",
+  "description": "GSG Narrowcast",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG4/gsg_narrowcast.git"
+  },
+  "author": "Abdallah, Ishak, Razan, Farah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG4/gsg_narrowcast/issues"
+  },
+  "homepage": "https://github.com/FACG4/gsg_narrowcast#readme"
+}
