@@ -4,6 +4,7 @@
   "description": "GSG Narrowcast",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/FACG4/gsg_narrowcast/issues"
   },
-  "homepage": "https://github.com/FACG4/gsg_narrowcast#readme"
+  "homepage": "https://github.com/FACG4/gsg_narrowcast#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
+  }
 }
