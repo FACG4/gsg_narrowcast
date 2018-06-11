@@ -1,5 +1,5 @@
 const tape = require('tape');
-const { Users, Events, Programs } = require('../src/database/db_build');
+const { Users } = require('../src/database/db_build');
 
 tape('saving users into the database', (t) => {
   const mohammed = new Users({
