@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "istanbul cover test/test.js | tap-spec"
+    "test": "istanbul cover test/tests_index.js | tap-spec"
   },
   "repository": {
     "type": "git",
