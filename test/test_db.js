@@ -12,7 +12,6 @@ tape('saving users into the database', (t) => {
   const expected = 'hani';
   hani.save().then(() => {
     Users.find({ username: 'hani' }).then((res) => {
-      console.log(res);
       t.equal(res[0].username, expected, 'the database should contain a user with the username hani');
       t.end();
     });
