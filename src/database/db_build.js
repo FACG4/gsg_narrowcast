@@ -1,9 +1,4 @@
-const { db, mongoose } = require('./db_connect');
-
-db.on('error', console.error.bind(console, 'connection error'))
-  .once('open', () => {
-    console.log('we\'re live');
-  });
+const { mongoose } = require('./db_connect');
 
 // schema is the equivalent of a table in postgres. in vanilla mongodb, it's called collection.
 const { Schema } = mongoose;

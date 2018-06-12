@@ -1,18 +1,20 @@
 const tape = require('tape');
 const { Users } = require('../src/database/db_build');
 
+
 tape('saving users into the database', (t) => {
-  const mohammed = new Users({
+  const hani = new Users({
     role: 1,
-    username: 'mohammed',
+    username: 'hani',
     password: 'username',
     email: 'password',
   });
-  const expected = false;
-  mohammed.save().then(() => {
-    t.equal(mohammed.isNew, expected, 'user should exist in the database and not be identified as new');
+  const expected = 'hani';
+  hani.save().then(() => {
+    Users.find({ username: 'hani' }).then((res) => {
+      console.log(res);
+      t.equal(res[0].username, expected, 'the database should contain a user with the username hani');
+      t.end();
+    });
   }).catch(err => t.fail(err));
-  t.end();
 });
-
-module.exports = tape;
