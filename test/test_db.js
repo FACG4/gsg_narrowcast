@@ -17,8 +17,3 @@ tape('saving users into the database', (t) => {
     });
   }).catch(err => t.fail(err));
 });
-
-tape('tst', (t) => {
-  t.equal(1,1);
-  t.end();
-})
