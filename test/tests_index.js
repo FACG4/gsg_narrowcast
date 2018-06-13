@@ -7,7 +7,6 @@ const tape = require('tape');
 dbConnection.on('error', console.error.bind(console, 'error in connecting to the database'));
 
 dbConnection.once('open', () => {
-
   // clearing the database
   require('./db_reset');
 
