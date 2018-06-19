@@ -16,7 +16,7 @@ const usersSchema = new Schema({
   email: { type: String, unique: true },
 });
 
-const eventSchema = new Schema({
+const NinjaSchema = new Schema({
   startDate: Date,
   endDate: Date,
   title: String,
@@ -37,10 +37,37 @@ const programSchema = new Schema({
 // models basically allow us to create and interact with rows.
 // In plain mongodb it's called documents.
 const Users = mongoose.model('users', usersSchema);
-const Events = mongoose.model('events', eventSchema);
+const Events = mongoose.model('ninja', ninjaSchema);
 const Programs = mongoose.model('programs', programSchema);
+
+
+
 // for example, Users.find({ username: farah, age: 26 }) should select any document(row)
 // with username value of farah and age value of 26.
 
+db.addEvent.insert('freelancer')
+event.Schema.methods.title = function () {
+  var titel = this.name
+    ? "freelancer" + this.name
+    : "";
+  console.log(freelancer);
+}
 
-module.exports = { Users, Events, Programs };
+// var Kitten = mongoose.model('Kitten', kittySchema);
+
+var schema = new Schema({
+
+})
+
+db.createCollection("events", function(err, res) {
+  if (err) throw err;
+  console.log("Collection created!");
+  db.close();
+})
+
+
+
+
+
+
+module.exports = { Users, AddEvent, Programs };
