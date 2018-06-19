@@ -1,6 +1,7 @@
 const { db, mongoose } = require('./db_connect');
+const AddEvent=mongoose.model('event,eventSchema')
 
-db.on('error', console.error.bind(console, 'connection error'))
+db.on('error', console.error.bind(console, 'connection error');
   .once('open', () => {
     console.log('we\'re live');
   });
@@ -16,7 +17,7 @@ const usersSchema = new Schema({
   email: { type: String, unique: true },
 });
 
-const NinjaSchema = new Schema({
+const AddEventSchema = new Schema({
   startDate: Date,
   endDate: Date,
   title: String,
