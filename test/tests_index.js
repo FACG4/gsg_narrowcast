@@ -1,4 +1,4 @@
-const { dbConnection } = require('../src/database/db_connect');
+const dbConnection = require('../src/database/db_connect');
 const tape = require('tape');
 
 /* eslint-disable no-console */
@@ -7,10 +7,17 @@ const tape = require('tape');
 dbConnection.on('error', console.error.bind(console, 'error in connecting to the database'));
 
 dbConnection.once('open', () => {
-  // clearing the database
+  // clearing the database.
   require('./db_reset');
 
+  // testing the database schema.
   require('./test_db');
+
+  // testing the 404 error
+  require('./controllers/error');
+
+  // testing the home route
+  require('./controllers/home');
 
   tape.onFinish(() => {
     dbConnection.close();

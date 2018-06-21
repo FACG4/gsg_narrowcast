@@ -1,4 +1,5 @@
-const { express, path, exphbs } = require('./reqs');
+const { express, path, exphbs, controllers, serverError } = require('./reqs');
+
 
 const app = express();
 
@@ -13,5 +14,8 @@ app.engine('hbs', exphbs({
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 3000);
+app.use(controllers);
+app.use(serverError);
+
 
 module.exports = app;
