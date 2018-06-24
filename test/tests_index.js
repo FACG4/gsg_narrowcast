@@ -12,6 +12,8 @@ dbConnection.once('open', () => {
 
   require('./test_db');
 
+  require('./controllers/event_db.js')
+
   tape.onFinish(() => {
     dbConnection.close();
   });

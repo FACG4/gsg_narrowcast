@@ -1,9 +1,13 @@
-const express = require('express');
+ const express = require('express');
 
 const router = express.Router();
-const addEvent = require('./modle/AddEvent');
+const event = require('./event')
+const login = require('./login');
 
-router.get('/AddEvent', AddEvent.get);
-router.post('/AddEvent',  AddEvent.post);
-router.Put('/ AddEvent',  AddEvent.put);
+router.get('/events/', event.get)
+router.post('/events/create', event.post)
+router.get('/events/delete/:eventId', event.delete)
+router.get('/login', login.get);
+router.post('/login', login.post);
+
 

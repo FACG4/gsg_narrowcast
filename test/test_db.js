@@ -17,3 +17,4 @@ tape('saving users into the database', (t) => {
     });
   }).catch(err => t.fail(err));
 });
+
