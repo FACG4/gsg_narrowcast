@@ -14,6 +14,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/home/farah/gsg_narrowcast/src/database/users_schema.js
 FNF:0
 FNH:0
@@ -41,10 +42,14 @@ BRH:0
 end_of_record
 TN:
 SF:/home/farah/gsg_narrowcast/src/app.js
+=======
+SF:/home/farah/gsg_narrowcast/src/database/db_build.js
+>>>>>>> c39669a34cf8747b921fee0cb7c7df52f1756c37
 FNF:0
 FNH:0
 DA:1,1
 DA:2,1
+<<<<<<< HEAD
 DA:3,1
 DA:4,1
 DA:5,1
@@ -81,11 +86,21 @@ DA:8,1
 DA:9,1
 DA:10,1
 DA:17,1
+=======
+DA:4,1
+DA:11,1
+DA:22,1
+DA:29,1
+DA:30,1
+DA:31,1
+DA:34,1
+>>>>>>> c39669a34cf8747b921fee0cb7c7df52f1756c37
 LF:9
 LH:9
 BRF:0
 BRH:0
 end_of_record
+<<<<<<< HEAD
 TN:
 SF:/home/farah/gsg_narrowcast/src/controllers/home.js
 FNF:0
@@ -131,3 +146,5 @@ BRDA:22,1,1,1
 BRF:2
 BRH:1
 end_of_record
+=======
+>>>>>>> c39669a34cf8747b921fee0cb7c7df52f1756c37
