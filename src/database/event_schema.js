@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 
 const eventSchema = mongoose.Schema({
-  startDate: Date,
-  endDate: Date,
+  startDate: { type: Date, default: Date.now() },
+  endDate: { type: Date, default: Date.now() },
   title: String,
   hall: String,
   speaker: String,

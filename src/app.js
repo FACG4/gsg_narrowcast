@@ -1,5 +1,9 @@
-const { express, path, exphbs, controllers, serverError } = require('./reqs');
-
+const express = require('express');
+const path = require('path');
+const exphbs = require('express-handlebars');
+const controllers = require('./controllers');
+const error = require('./controllers/error');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -12,10 +16,12 @@ app.engine('hbs', exphbs({
   defaultLayout: 'main',
 }));
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 3000);
 app.use(controllers);
-app.use(serverError);
-
+app.use(error.notFound);
+app.use(error.serverError);
 
 module.exports = app;

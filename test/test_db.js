@@ -1,5 +1,6 @@
-const tape = require('tape');
 const Users = require('../src/database/users_schema');
+const Events = require('../src/database/event_schema');
+const tape = require('tape');
 
 
 tape('saving users into the database', (t) => {
@@ -29,7 +30,6 @@ tape('saving users into the database', (t) => {
   })
     .then(() => {
       Users.find({ username: 'farah', email: 'hello' }).then((res) => {
-        console.log(res);
         t.equal(res[0].username, expected, 'the database should contain a user with the username hani');
         t.end();
       })
@@ -42,4 +42,29 @@ tape('checking type of response', (t) => {
     t.equal(Array.isArray(res), true, 'result should be array');
     t.end();
   }).catch(err => console.log(err));
+});
+
+
+tape('users 3', (t) => {
+  Users.create({
+    role: 0,
+    username: 'ss',
+    password: 'users_schema',
+    email: 'aa'
+  }).then().catch(err => console.log(err));
+  t.end();
+});
+
+tape('events 1', (t) => {
+  Events.create({
+    startDate: "2016-05-18T16:00:00Z",
+    endDate: "2016-05-18T16:10:00Z",
+    title: '1',
+    hall: '1',
+    speaker: '1',
+    imageUrl: '2',
+    descriptionTitle: '2',
+    DescriptionText: '2',
+  }).then().catch(err => console.log(err));
+  t.end();
 });

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose').set('debug', true);
 require('env2')('./config.env');
 
 const dbUrl = process.env.DB_URL;
