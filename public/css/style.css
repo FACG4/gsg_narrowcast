@@ -1,0 +1,40 @@
+form {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: aqua;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 20px #999;
+text-align: center;
+background-image: url("events.jpeg");
+text-align: left;
+font color: #000;
+
+}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ text-align: center;
+  box-sizing: border-box;
+}
+input[class=hall], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ text-align: center;
+  box-sizing: border-box;
+color:red;
+}
