@@ -6,5 +6,5 @@ const usersSchema = mongoose.Schema({
     password: String,
     email: { type: String, unique: true },
   });
-  const users= mongoose.model('Users' ,usersSchema);
+ module.exports = mongoose.model('Users' ,usersSchema);
   

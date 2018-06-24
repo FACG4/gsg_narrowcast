@@ -1,4 +1,4 @@
-const connection = require('./../db_connect');
+const connection = require('./db_connect');
 const getUser = (name, cb) => {
   const sql = {
     text: 'SELECT * FROM users WHERE  user_name = $1',

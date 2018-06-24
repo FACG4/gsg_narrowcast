@@ -1,20 +1,20 @@
 const tape = require('tape');
-const event = require('../../src/database/events')
+const Events = require('../../src/database/events')
 
 tape('save into database', (t) => {
-   const CreatedEvent =  new event({
+   const createdEvent =  new Events({
         title:'freelancer',
         description: 'rrrrrrioj',
         speaker: 'saad',
         hall: 'open state',
         startDate : '',
-        endDate
+        endDate: '',
     })
-    const expected = CreatedEvent;
-      event.save().then(()=>{
+      createdEvent.save().then(()=>{
       event.find({ title:'freelancer'}).then((res)=> {
         t.equal(res[0].title,'freelancer');
         t.end();
       });
     }).catch(err => t.fail(err));
 })
+

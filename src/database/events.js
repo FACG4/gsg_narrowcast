@@ -11,6 +11,4 @@ const eventSchema = mongoose.Schema({
   DescriptionText: String
 })
 
-const event = mongoose.model('event', eventSchema)
-
-module.exports = event;
+module.exports= mongoose.model('Events', eventSchema) 
