@@ -17,7 +17,6 @@ add.addEventListener('click', (e) => {
     descriptionTitle: select('#description-title').value,
     DescriptionText: select('#description-text').value,
   };
-  console.log(requestBody);
   const path = location.pathname.split('/')[2];
   fetch(`/update-event/${path}`, {
     method: 'POST',
@@ -30,5 +29,5 @@ add.addEventListener('click', (e) => {
     .then((result) => {
       ss.textContent = result.message;
     })
-    .catch(err => console.log('error', err));
+    .catch(err => ss.textContent = 'There has been a network error');
 });

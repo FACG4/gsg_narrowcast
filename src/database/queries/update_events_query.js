@@ -1,10 +1,6 @@
 const Events = require('../event_schema');
 
-const query = (req, res, callback) => {
-  if (Object.values(res.req.body).includes('')) {
-    res.send({ message: 'please make sure all fields are filled with valid data' });
-    return;
-  }
+const query = (req, callback) => {
   Events.findByIdAndUpdate(req.params.id,
     {
       $set: {
@@ -23,12 +19,12 @@ const query = (req, res, callback) => {
     },
     (err, response) => {
       if (err) return err;
-      if (response === null) res.send({ message: 'the event you are trying to update does not exist' });
-      if (callback && typeof callback === 'function') callback();
+      callback();
     })
     .then(() => {
     })
     .catch(err => err);
 };
+
 
 module.exports = query;
