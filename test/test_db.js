@@ -50,7 +50,7 @@ tape('users 3', (t) => {
     role: 0,
     username: 'ss',
     password: 'users_schema',
-    email: 'aa'
+    email: 'aa',
   }).then().catch(err => t.error(err));
   t.end();
 });
