@@ -2,14 +2,14 @@
 /* eslint-disable no-restricted-globals */
 
 const add = select('#add-events');
-const ss = select('#ss');
+const message = select('#message');
 
 
 add.addEventListener('click', (e) => {
   e.preventDefault();
   const requestBody = {
-    startDate: select('#start-date').value,
-    endDate: select('#end-date').value,
+    startDate: select('#start-date').value.concat('T').concat(select('#start-time').value),
+    endDate: select('#end-date').value.concat('T').concat(select('#end-time').value),
     title: select('#title').value,
     hall: select('#hall').value,
     speaker: select('#speaker').value,
@@ -27,7 +27,8 @@ add.addEventListener('click', (e) => {
   })
     .then(res => res.json())
     .then((result) => {
-      ss.textContent = result.message;
+      console.log(result);
+      message.textContent = result.message;
     })
     .catch(err => ss.textContent = 'There has been a network error');
 });
