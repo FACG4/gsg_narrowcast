@@ -21,6 +21,7 @@ exports.post = (req, res, next) => {
     },
     (err, response) => {
       if (err) res.send({ message: 'some data is invalid' });
+      if (response === null) res.send({ message: 'The event you are trying to update either does not exist or has been removed.' });
     })
     .then(() => {
       res.send({ message: 'event successfully updated' });
