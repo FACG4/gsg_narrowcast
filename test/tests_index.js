@@ -1,5 +1,5 @@
-const dbConnection = require('../src/database/db_connect');
 const tape = require('tape');
+const dbConnection = require('../src/database/db_connect');
 
 /* eslint-disable no-console */
 /* eslint-disable global-require */

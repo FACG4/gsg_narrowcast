@@ -2,8 +2,7 @@ const tape = require('tape');
 const Events = require('../../src/database/event_schema');
 
 
-//creating events to be tested in the update function.
-
+// creating events to be tested in the update function.
 tape('add first event', (t) => {
   Events.create({
     startDate: '2016-05-18T16:20:00Z',
@@ -19,8 +18,8 @@ tape('add first event', (t) => {
       t.equal(res[0].speaker, 'FACG', 'event 1 should be properly added.');
       t.end();
     })
-    .catch(err => console.log(err));
-  }).catch(err => console.log(err))
+      .catch(err => t.error(err));
+  }).catch(err => t.error(err));
 });
 
 tape('add second event', (t) => {
@@ -38,8 +37,8 @@ tape('add second event', (t) => {
       t.equal(res[0].speaker, 'Saad', 'event 2 should be properly added.');
       t.end();
     })
-    .catch(err => t.error(err));
-  })
+      .catch(err => t.error(err));
+  });
 });
 
 tape('add third event', (t) => {
@@ -57,8 +56,8 @@ tape('add third event', (t) => {
       t.equal(res[0].speaker, 'Geeks', 'event 3 should be properly added.');
       t.end();
     })
-    .catch(err => t.error(err));
-  })
+      .catch(err => t.error(err));
+  });
 });
 
 tape('add fourth event', (t) => {
@@ -76,6 +75,6 @@ tape('add fourth event', (t) => {
       t.equal(res[0].speaker, 'FACG', 'event 4 should be properly added.');
       t.end();
     })
-    .catch(err => t.error(err));
-  })
+      .catch(err => t.error(err));
+  });
 });
