@@ -21,16 +21,12 @@ dbConnection.once('open', () => {
       require('./controllers/add_events');
     })
     .then(() => {
-      // testing the error controllers
-      require('./controllers/error');
-    })
-    .then(() => {
-      // testing the home route
-      require('./controllers/home');
-    })
-    .then(() => {
       // testing the update event controller
       require('./controllers/update_events');
+    })
+    .then(() => {
+      // testing the error controllers
+      require('./controllers/error');
     });
 
   tape.onFinish(() => {

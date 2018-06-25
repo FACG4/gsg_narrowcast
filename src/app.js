@@ -7,6 +7,8 @@ const error = require('./controllers/error');
 
 const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine('hbs', exphbs({
@@ -16,8 +18,6 @@ app.engine('hbs', exphbs({
   defaultLayout: 'main',
 }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 3000);
 app.use(controllers);
