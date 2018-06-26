@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1> Hello there</h1>
+<div class="container">
+<div class="boxs">
+  {{#each result}}
+<div class="box">
+  <div class="innerbox">
+    <a class="a" href="/details/{{this.id}}"></a>
+  </div>
+  <div class="innerboxinfo">
+    <div>
+    <p class="info">{{this.id}} NIS </p>
+  </div>
+  <div>
+  <p class="info">{{this.hall}} NIS </p>
+</div>
+  </div>
+
+  <div class="innerboxinfo">
+    <div>
+    <p class="info">{{this.title}} NIS </p>
+  </div>
+  <div>
+  <p class="info">{{this.hall}} NIS </p>
+</div>
+  </div>
+
+  <div class="innerbox">
+    <!-- <button type="submit" name="button" id="{{this.id}}" class="editBtn">Edit</button> -->
+    <button type="button" name="button"class="editBtn"><a href="/update-event/{{this.id}}">Edit</a></button>
+
+    <!-- <button type="button" name="button" id="{{this.id}}" class="viewBtn">View</button> -->
+    <button type="button" name="button"class="viewBtn"><a href="/view/{{this.id}}">View</a></button>
+
+    <button type="button" name="button" id="{{this.id}}" class="deleteBtn">Delete</button>
+
+    <!-- <a class="a" href="/deleteEvents/{{this.id}}">delete</a> -->
+
+
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <p id="text"></p>
+    </div>
+  </div>
+</div>
+  {{/each}}
+  <button type="button" name="button"class="addBtn"><a href="/events/create">Add</a></button>
+</div>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/js/dom_functions.js"></script>
+<script src="/js/view_event_page.js"></script>
+</body>
+
+</html>
