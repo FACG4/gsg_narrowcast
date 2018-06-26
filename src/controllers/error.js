@@ -1,4 +1,5 @@
 exports.serverError = (err, req, res, next) => {
+  console.log(err);
   res.status(500).render('error', { error: 'Server Error', text: 'Something went wrong with the server' });
 };
 

@@ -11,7 +11,7 @@ exports.post = (req, res, next) => {
 
   // validation for nulls and consistent data
   if (Object.values(request.body).includes('')) return res.send({ message: 'Please make sure that all fields are filled with valid data' });
-
+  if (!myStartingDate || !myEndingDate) return res.send({ message: 'please specify date and time of the event' });
   if (Date.now() > myStartingDate) return res.send({ message: 'You have set the starting date to the past' });
   if (Date.now() > myEndingDate) return res.send({ message: 'You have set the ending date to the past' });
   if (myStartingDate > myEndingDate) return res.send({ message: 'Event ending date cannot be earlier the starting date' });

@@ -1,0 +1,28 @@
+<h1>view Events</h1>
+<div class="container">
+  {{#each result}}
+    <div class="result">
+      <div class="info">
+        <p>{{this.title}}</p>
+      </div>
+      <div class="info">
+        <p>{{this.startDate}}</p>
+      </div>
+      <div class="info">
+        <p>{{this.endDate}}</p>
+      </div>
+      <div class="info">
+        <p>{{this.speaker}}</p>
+      </div>
+      <div class="info">
+        <p>{{this.hall}}</p>
+      </div>
+      <button type="button" class="edit" id="edit-{{this.id}}">Edit Event</button>
+      <button type="button" class="view" id="view-{{this.id}}">View Event</button>
+      <button type="button" class="delete" id="delete-{{this.id}}">Delete Event</button>
+    </div>
+  {{/each}}
+</div>
+
+<script src="/js/dom_functions.js"></script>
+<script src="/js/view_events.js"></script>

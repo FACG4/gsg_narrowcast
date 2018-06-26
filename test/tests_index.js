@@ -13,10 +13,6 @@ dbConnection.once('open', () => {
       require('./db_reset');
     })
     .then(() => {
-      // testing the database schema.
-      require('./test_db');
-    })
-    .then(() => {
       // adding events
       require('./controllers/add_events');
     })

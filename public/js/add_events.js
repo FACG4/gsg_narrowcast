@@ -9,7 +9,6 @@ add.addEventListener('click', (e) => {
   e.preventDefault();
   const startTime = select('#start-time').value;
   const endTime = select('#end-time').value;
-  console.log(startTime);
   const requestBody = {
     startDate: select('#start-date').value.concat('T').concat(startTime),
     endDate: select('#end-date').value.concat('T').concat(endTime),
@@ -20,8 +19,7 @@ add.addEventListener('click', (e) => {
     descriptionTitle: select('#description-title').value,
     DescriptionText: select('#description-text').value,
   };
-  console.log(requestBody.startDate);
-  fetch(`/add-event`, {
+  fetch('/add-event', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -29,8 +27,10 @@ add.addEventListener('click', (e) => {
     body: JSON.stringify(requestBody),
   })
     .then(res => res.json())
-    .then(res => message.textContent = res.message)
-    .catch((err) => {
+    .then(() => {
+      message.textContent = res.message;
+    })
+    .catch(() => {
       if (!startTime || !endTime) {
         message.textContent = 'Please set the start and end time of the event';
       }
