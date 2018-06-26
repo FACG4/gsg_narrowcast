@@ -1,32 +1,26 @@
-const Events = require('../database/events')
+const saveEvent = require('../database/queries/saveEvent');
 
+exports.get = (req, res, next) => {
+    res.render('event', {event: true, script: 'event_dom.js', title: 'My page' });
+}
 
  exports.post = (req, res, next) => {
-
-    const newEvent = new Event({
-        title: req.body.title,
-        description: req.body.description,
-        speaker: req.body.speaker,
-        hall: req.body.hall,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate
-    })
-    console.log('newEvent', newEvent)
-    newEvent.save()
+     console.log(req.body);
+     console.log('razan', req.body.title, req.body.description, req.body.speaker,
+      req.body.hall, req.body.startDate, req.body.endDate );
+    const { title, description, speaker, hall, startDate, endDate } = req.body;
+    saveEvent({title, description, speaker, hall, startDate, endDate})
     .then(event => {
-        res.json({
-            title: event.title,
-            description: event.description,
-            speaker: event.speaker,
-            hall: event.hall,
-            startDate: event.startDate,
-            endDate: event.endDate
-
-        })
+        // return res.json({
+        //    msg: 'success'
+        // })
     })
     .catch(err => {
+        console.log(err)
         res.status(500).json({
             message: 'Error in creating New Event . please try again..'
         })
     })
-}
+
+    
+};

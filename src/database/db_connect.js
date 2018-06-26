@@ -7,4 +7,4 @@ dburl = 'mongodb://localhost/database'
 mongoose.connect(dburl);
 const dbConnection = mongoose.connection;
 
-module.exports = { dbConnection, mongoose};
+module.exports = { dbConnection, mongoose };

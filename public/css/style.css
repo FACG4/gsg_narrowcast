@@ -1,40 +1,70 @@
-form {
-  display: inline-block;
-  padding: 20px 30px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: aqua;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 20px #999;
-text-align: center;
-background-image: url("events.jpeg");
-text-align: left;
-font color: #000;
+ .EventPageBody{
+   background-image: url('gazageeks.JPG');
+   background-repeat: no-repeat;
+   background-size: cover; 
+ }
 
+ .addeventBtn{background-color: orange;
+  border-radius: 10px;
+  width: 200px;
+  color: #47413d
+  text-align: center;
+  margin-left:50px;
 }
-input[type=text], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
- text-align: center;
-  box-sizing: border-box;
+
+.addeventBtn:hover{
+  background-color: rgb(43, 153, 188);
+  color: white;
 }
-input[class=hall], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
- text-align: center;
-  box-sizing: border-box;
-color:red;
+
+.Add-wrap {
+  text-align: center;
+ font-size: 20px;
+ background-color: black;
+ opacity: 0.8;
+ width: 900px;
+ margin-left: 430px;
+ padding-bottom: 30px;
+ padding-top: 30px;
+ border-radius: 20px;
+
+ }
+
+ 
+label{color: white;
+  border-radius: 60px;
+  text-align: center;
 }
+
+.addEventTitle{
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.imageurl{
+  border-radius: 10px;
+  text-align: center;
+  margin-left:0px;
+  margin-right: 60px;
+}
+ 
+ .des{
+  margin-left:4px;
+ }
+
+ 
+ 
+
+ .des, .speaker, .title, .hall, .date{
+border-radius: 10px;
+
+
+ }
+ .hall{
+   width: 100px;
+ }
+  
+
+
+ 

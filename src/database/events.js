@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const eventSchema = mongoose.Schema({
-  startDate: {type:Date , required: true, default: Date.now},
-  endDate: {type:Date , required: true, default: Date.now},
+  startDate: {type:Date , required: false},
+  endDate: {type:Date , required: false},
   title: String,
   hall: String,
   speaker: String,

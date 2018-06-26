@@ -1,47 +1,54 @@
 
+<body class="EventPageBody">
+    
 
 
-<form>
 
-<div class="Add-wrap">
+<form class="add-post" action="/event" method="POST">
+<br><br><br>
 
-{{data}}
-<h1> Event</h1>
-<form class="add-post" action="/Event" method="POST">
-<label for="">Title</label>
+<div class="center">
+    <div class="Add-wrap">
+    <h1 class="addEventTitle">Add Event</h1>
+    <label for="" >Title</label>
+    <input type="text"class="title" name="title" value="">
+    <br><br>
+    <label for="">Speaker </label>
+    <input type="text" name="speaker" class="speaker" value="">
+    <br>
 <br>
-<input type="text" name="title">
-<br>
-<label for="">Speaker </label>
-<br>
-<input type="text" name="speaker">
-<br>
-<textarea name="description" rows="8" cols="80"></textarea>
-<br>
-<label class="hall" for="">hall</label>
-<br>
-<input class="hall" name="hall" rows="8" cols="80"></input>
-<br>
-<label for=""> Date</label>
-<br>
-<input type="text" name="Date">
-<br>
-<label for=""> Image Url</label>
- <br> 
-<input type="Image Url" value="Image Url"/>
-<button onclick="myFunction()">Upload</button>
-<button onclick="myFunction()">Try it</button>
+     <label for="">Description</label>
+    
+   
+    <textarea name="description" class="des" rows="5" cols="40"></textarea>
+</br>
 
-<button id="myBtn">AddEvent</button>
+    <br>
+    <label for="" >Hall</label>
+    <input type="text" name="hall" class="hall">
 
-<script>
-     document.getElementById("myBtn").addEventListener("click", displayDate);
-function myFunction() {
-    var x = document.getElementById("myFile");
-    x.disabled = true;
-}
-</script>
+<br></br>
 
-</form>
+    <label for=""> StartDate</label>
+    <input type="datetime-local" class="start-date" name="startDate">
+    <br></br>
+     <label for=""> EndDate</label>
+    <input type="datetime-local" class="end-date" name="endDate">
+    <br></br>
+   <label for="" >ImageUrl</label>
+    <input type="text" class="imageurl" name="">
+ 
+    <br><br>
+    <button type="submit" id="myBtn" class="addeventBtn">Add Event</button>
+    </div>
 
 </div>
+
+
+    <script type="text/javascript" src="/js/event_dom.js">
+      </script>
+</form>
+
+
+
+</body>
