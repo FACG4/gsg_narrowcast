@@ -1,12 +1,15 @@
 const Events = require('../database/event_schema');
 const dbConnect = require('../database/db_connect');
+const deleteQuery = require('../database/queries/delete_events_querie');
 
 exports.get = (req, res, next) => {
-
-const eventsId = req.params.id;
-
-Events.findByIdAndRemove({ _id: eventsId })
-  .then(events => res.status(204).send(events))
-  .catch(next);
-
+  deleteQuery(req.params.id, (err, result) => {
+    // validate
+    if (err) return res.render('error', { error: 'abc', text: err });
+    const response = {
+      message: 'Event successfully deleted',
+      id: req.params.id,
+    };
+    return res.status(200).send(JSON.stringify(response));
+  });
 };
