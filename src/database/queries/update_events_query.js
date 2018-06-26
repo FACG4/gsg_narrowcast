@@ -19,7 +19,7 @@ const query = (req, callback) => {
     },
     (err, response) => {
       if (err) return err;
-      callback();
+      callback(null, response);
     })
     .then(() => {
     })
