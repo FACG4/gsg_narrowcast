@@ -1,4 +1,4 @@
-<h1>Update Event {{this.response.title}}</h1>
+<h1>Event {{this.title}}</h1>
 <form class="form" id="form" method="post">
 <div class="div">
   <label for="start-date">start-date</label>
@@ -14,37 +14,38 @@
   <input type="time" name="end-time" id="end-time">
 </div>
 
+
 <div class="div">
   <label for="title">title</label>
-  <input type="text" name="title" id="title" value="{{this.response.title}}">
+  <input type="text" name="title" id="title">
 </div>
 
 <div class="div">
   <label for="hall">hall</label>
-  <input type="text" name="hall" id="hall" value="{{this.response.hall}}">
+  <input type="text" name="hall" id="hall">
 </div>
 
 <div class="div">
   <label for="speaker">speaker</label>
-  <input type="text" name="speaker" id="speaker" value="{{this.response.speaker}}">
+  <input type="text" name="speaker" id="speaker">
 </div>
 
 <div class="div">
   <label for="image-url">image url</label>
-  <input type="text" name="imageUrl" id="image-url" value="{{this.response.imageUrl}}">
+  <input type="text" name="imageUrl" id="image-url">
 </div>
 
 <div class="div">
   <label for="desc-title">description title</label>
-  <input type="text" name="descriptionTitle" id="description-title" value={{this.response.descriptionTitle}}>
+  <input type="text" name="descriptionTitle" id="description-title">
 </div>
 
 <div class="div">
   <label for="description-text">description text</label>
-  <input type="text" name="DescriptionText" id="description-text" value="{{this.response.DescriptionText}}">
+  <input type="text" name="DescriptionText" id="description-text">
 </div>
 
-  <button type="submit" id="update-events">add events</button>
+  <button type="submit" id="add-events">add events</button>
 </form>
 
 <div class="message-div">
@@ -55,4 +56,4 @@
 
 
 <script src="/js/dom_functions.js"></script>
-<script src="/js/update_events.js"></script>
+<script src="/js/add_events.js"></script>

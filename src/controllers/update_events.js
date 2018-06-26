@@ -21,11 +21,11 @@ exports.post = (req, res, next) => {
   });
 };
 
-
 exports.get = (req, res, next) => {
   Events.findById(req.params.id).then((response) => {
     res.render('update_events', {
-      result: response,
+      response,
+      startDate: response.startDate,
     });
   })
     .catch(err => next(err));
