@@ -1,6 +1,7 @@
 const { express, path, exphbs } = require('./reqs');
 const controllers = require('./controllers');
 const bodyParser = require('body-parser');
+const dbConnection = require('./database/db_connect')
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));

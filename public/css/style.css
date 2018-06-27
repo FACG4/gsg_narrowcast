@@ -45,8 +45,10 @@ label{color: white;
 .imageurl{
   border-radius: 10px;
   text-align: center;
-  margin-left:0px;
-  margin-right: 60px;
+  margin-left:40px;
+  margin-right: 40px;
+  width: 300px;
+
 }
  
  .des{
@@ -56,7 +58,7 @@ label{color: white;
  
  
 
- .des, .speaker, .title, .hall, .date{
+ .des, .speaker, .title, .hall, .date, .start-date , .end-date{
 border-radius: 10px;
 
 
