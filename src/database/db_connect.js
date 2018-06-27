@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 require('env2')('./config.env');
 
-const dbUrl = process.env.DB_URL;
 
-mongoose.connect(dbUrl);
-const dbConnection = mongoose.connection;
+dburl = 'mongodb://localhost/database'
+mongoose.connect(dburl);
 
-module.exports = { dbConnection };
+module.exports =   mongoose.connection;

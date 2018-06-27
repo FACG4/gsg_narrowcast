@@ -1,5 +1,5 @@
 const tape = require('tape');
-const { Users } = require('../src/database/db_build');
+const Users = require('../src/database/users')
 
 
 tape('saving users into the database', (t) => {
@@ -17,3 +17,4 @@ tape('saving users into the database', (t) => {
     });
   }).catch(err => t.fail(err));
 });
+

@@ -1,37 +1,37 @@
 {
   "name": "gsg_narrowcast",
   "version": "1.0.0",
-  "description": "GSG Narrowcast",
-  "main": "index.js",
+  "description": "[![Build Status](https://travis-ci.org/FACG4/gsg_narrowcast.svg?branch=master)](https://travis-ci.org/FACG4/gsg_narrowcast) # GSG_Narrowcast: An app that allows you to quickly and effortlessly learn about all upcoming events held in GSG as well as understand what GSG does as an entity, what their main programs are and whether they interest you.",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "env2": "^2.2.2",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.6",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
   "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "istanbul cover test/tests_index.js | tap-spec"
+    "test": "tape test/tests_index.js | tap-spec",
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FACG4/gsg_narrowcast.git"
   },
-  "author": "Abdallah, Ishak, Razan, Farah",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FACG4/gsg_narrowcast/issues"
   },
-  "homepage": "https://github.com/FACG4/gsg_narrowcast#readme",
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.17.5",
-    "supertest": "^3.1.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.9.1"
-  },
-  "dependencies": {
-    "env2": "^2.2.2",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mongoose": "^5.1.5"
-  }
+  "homepage": "https://github.com/FACG4/gsg_narrowcast#readme"
 }
