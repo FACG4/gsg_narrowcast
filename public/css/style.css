@@ -43,22 +43,42 @@ main {
     margin-bottom: 45px;
 }
 .event--tittle {
-    margin-top: -6px;
+    text-align: center;
+    margin: auto;
 }
 
-.event--day{
-    height: 70px;
-    width: 50%;
+.event--day {
+    height: 40%;
+    width: 30%;
     margin-right: 20px;
     border-radius: 9px;
     display: inline-block;
     overflow: hidden;
 }
 
+
+
+.hidden {
+  display: none;
+}
+
+.speaker {
+  margin-left: 1%;
+}
+
+.main-title {
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+.main-description {
+  font-size: 20px;
+}
+
 .event--day span {
     height: 50%;
     display: block;
-    text-align: center;  
+    text-align: center;
     color: #fff;
     line-height: 35px;
 }
@@ -68,20 +88,20 @@ main {
     font-size: 0.8rem;
     font-weight: 700;
 }
- 
+
 .event--day span:last-child {
     background: linear-gradient(to right, #ef4e0d, #f27b00);
     font-size: 1.7rem;
     font-weight: 600;
 }
- 
+
 .event--tittle span {
     font-size: 0.7rem;
     font-weight: 700;
     color: #838586;
 }
 
-.event--tittle h3 {
+.event--tittle h4 {
     color: #ee490f;
     margin-top: 8px;
 }
@@ -92,12 +112,20 @@ main {
     height: 100px;
     display: inline-block;
     border-radius: 10px;
+    text-align: center;
 }
 
 .comming--soon-timer span {
     display: block;
     text-align: center;
 
+}
+.comming--soon-timer input {
+    display: block;
+    text-align: center;
+    max-resolution: auto;
+    width: 50%;
+    max-width: 40px;
 }
 .comming--soon-timer div span:first-child {
     color: #2a82ac;
@@ -122,11 +150,11 @@ main {
 .icon--events {
     display: grid;
     grid-template-columns: 50% 50%;
-}  
+}
 
 .event--details {
     display: grid;
-    grid-template-rows: 20% 50% 30%; 
+    grid-template-rows: 20% 50% 30%;
 }
 
 .logo img {

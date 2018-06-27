@@ -16,7 +16,6 @@ deleteEvent.forEach((deleteButton) => {
   });
 });
 
-
 editEvent.forEach((editButton) => {
   editButton.addEventListener('click', () => {
     const id = editButton.id.split('-')[1];
