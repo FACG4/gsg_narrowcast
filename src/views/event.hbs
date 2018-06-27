@@ -10,35 +10,46 @@
 <div class="center">
     <div class="Add-wrap">
     <h1 class="addEventTitle">Add Event</h1>
-    <label for="" >Title</label>
-    <input type="text"class="title" name="title" value="">
+    <div class="form">
+            <label for="" >Title</label>
+            <input type="text"class="title" name="title" value="">
+    </div>
     <br><br>
-    <label for="">Speaker </label>
-    <input type="text" name="speaker" class="speaker" value="">
+    <div class="form">
+            <label for="">Speaker </label>
+            <input type="text" name="speaker" class="speaker" value="">
+    </div>
+
     <br>
 <br>
-     <label for="">Description</label>
-    
-   
-    <textarea name="description" class="des" rows="5" cols="40"></textarea>
+    <div class="form">
+            <label for="">Description</label>
+            <textarea name="description" class="des" rows="5" cols="40"></textarea>
+
+    </div>
+
 </br>
 
     <br>
-    <label for="" >Hall</label>
-    <input type="text" name="hall" class="hall">
-
+           <div class="form">
+           <label for="" >Hall</label>
+           <input type="text" name="hall" class="hall">
+            </div>
 <br></br>
+        <div class="form">
+            <label for=""> StartDate</label>
+            <input type="datetime-local" class="start-date" name="startDate">
+            </div>
 
-    <label for=""> StartDate</label>
-    <input type="datetime-local" class="start-date" name="startDate">
     <br></br>
+
+
+     <div class="form">
      <label for=""> EndDate</label>
-    <input type="datetime-local" class="end-date" name="endDate">
+      <input type="datetime-local" class="end-date" name="endDate">
+      </div>
     <br></br>
-   <label for="" >ImageUrl</label>
-    <input type="text" class="imageurl" name="">
- 
-    <br><br>
+   
     <button type="submit" id="myBtn" class="addeventBtn">Add Event</button>
     </div>
 
