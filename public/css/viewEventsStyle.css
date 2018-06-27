@@ -23,17 +23,6 @@ flex-direction: column;
 flex-wrap: wrap;
 }
 
-
-
-/* .input {
-background-color: #742223;
-border: 0;
-color: white;
-font-family: Roboto;
-font-style: Regular;
-font-size: 15px;
-} */
-
 .input:hover {
 font-size: 17px;
 color: #eae4ac;
@@ -80,8 +69,6 @@ border: 1px solid #828282;
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
-/* margin-right: 90px; */
-/* border-radius: 50%; */
 align-items: center;
 justify-content: space-around;
 width: 260px;
@@ -137,7 +124,6 @@ background-color: rgba(0, 0, 0, 0.4);
 background-color: #fefefe;
 margin: auto;
 padding: 20px;
-/* border: 1px solid #888; */
 width: 80%;
 }
 
