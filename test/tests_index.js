@@ -20,7 +20,10 @@ dbConnection.once('open', () => {
   require('./controllers/home');
 
   // testing the viewEvents route
-  require('./controllers/view_events')
+  require('./controllers/view_events');
+
+  // testing the viewEvents route
+  require('./controllers/delete_event');
 
   // operation test
   // require('./events_operations');

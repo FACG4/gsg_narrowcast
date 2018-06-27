@@ -9,12 +9,24 @@ const Events = require('../../src/database/event_schema');
 tape('testing the viewEvents route content type and status code', (t) => {
   Events.create(
     {
-      title: 'qqqqqq',
-      hall: 'hahhhh',
+      startDate: '2016-05-18T16:20:00Z',
+      endDate: '2016-05-18T16:30:00Z',
+      title: 'geexelerator',
+      hall: 'hall 1',
+      speaker: 'Geeks',
+      imageUrl: 'image 3',
+      descriptionTitle: 'description',
+      DescriptionText: 'text',
     },
     {
-      title: 'wwwwwww',
-      hall: 'ttttttt',
+      startDate: '2016-05-19T16:20:00Z',
+      endDate: '2016-05-19T16:30:00Z',
+      title: 'geexelerator',
+      hall: 'hall 1',
+      speaker: 'Geeks',
+      imageUrl: 'image 3',
+      descriptionTitle: 'description',
+      DescriptionText: 'text',
     },
   )
     .then(() => {
@@ -34,12 +46,24 @@ tape('testing the viewEvents route content type and status code', (t) => {
 tape('testing the viewEvents route contain the inserted title', (t) => {
   Events.create(
     {
-      title: 'qqqqqq',
-      hall: 'hahhhh',
+      startDate: '2016-05-18T16:30:00Z',
+      endDate: '2016-05-18T16:40:00Z',
+      title: 'geexelerator',
+      hall: 'hall 1',
+      speaker: 'Geeks',
+      imageUrl: 'image 3',
+      descriptionTitle: 'description',
+      DescriptionText: 'text',
     },
     {
-      title: 'wwwwwww',
-      hall: 'ttttttt',
+      startDate: '2016-06-18T16:20:00Z',
+      endDate: '2016-06-18T16:30:00Z',
+      title: 'geexelerator',
+      hall: 'hall 1',
+      speaker: 'Geeks',
+      imageUrl: 'image 3',
+      descriptionTitle: 'description',
+      DescriptionText: 'text',
     },
   )
     .then(() => {
@@ -49,24 +73,29 @@ tape('testing the viewEvents route contain the inserted title', (t) => {
         .expect('Content-Type', 'text/html; charset=utf-8')
         .end((err, response) => {
           t.error(err);
-          t.equal(response.text.includes('qqqqqq'), true, 'content type should be html');
+          t.equal(response.text.includes('geexelerator'), true, 'content type should be html');
           t.end();
         });
     });
 });
 
 tape('saving events into the database', (t) => {
-  const expected = 'gsg';
+  const expected = 'geexelerator';
   Events.create({
-    title: 'gsg',
-    hall: 'hall 1',
+    startDate: '2016-07-18T16:20:00Z',
+    endDate: '2016-07-18T16:30:00Z',
+    title: 'geexelerator',
+    speaker: 'Geeks',
+    imageUrl: 'image 3',
+    descriptionTitle: 'description',
+    DescriptionText: 'text',
   })
-  .then(() => {
-    Events.find({ title: 'gsg'}).then((res) => {
+.then(() => {
+Events.find({ title: 'geexelerator'}).then((res) => {
       // console.log(res);
-      t.equal(res[0].title, expected, 'the database should contain an event with the title gsg');
-      t.end();
-    })
-    .catch(findErr => t.error(findErr));
-  }).catch(insertErr => (insertErr));
+        t.equal(res[0].title, expected, 'the database should contain an event with the title geexelerator');
+        t.end();
+      })
+        .catch(findErr => t.error(findErr));
+    }).catch(insertErr => (insertErr));
 });
