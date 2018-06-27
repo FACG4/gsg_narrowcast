@@ -6,4 +6,4 @@ const dbUrl = process.env.DB_URL;
 mongoose.connect(dbUrl);
 const dbConnection = mongoose.connection;
 
-module.exports = { dbConnection };
+module.exports = dbConnection;
