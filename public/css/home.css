@@ -1,0 +1,26 @@
+body {
+  background-color: #2D9CDB;
+  display: flex;
+  flex-direction: row;
+}
+
+.headline {
+  background-color: green;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  margin: 30px;
+}
+
+.events-container {
+  display: flex;
+  background-color: yellow;
+}
+
+.programs-container {
+  background-color: blue;
+}
