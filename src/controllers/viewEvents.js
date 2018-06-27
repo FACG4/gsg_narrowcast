@@ -1,4 +1,3 @@
-const Events = require('../database/event_schema');
 const dbConnect = require('../database/db_connect');
 const viewQuery = require('../database/queries/view_events_querie');
 

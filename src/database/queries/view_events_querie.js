@@ -1,15 +1,9 @@
 const Events = require('../event_schema');
 
-const viewQuery = (req, callback) => {
-  if (!callback && typeof req === 'function') {
-    Events.find({}).then((res) => {
-      req(null, res);
-    }).catch(err => req(err));
-  } else if (callback && typeof callback === 'function') {
-    Events.find(req).then((res) => {
-      callback(null, res);
-    }).catch(err => req(err));
-  }
+const viewQuery = (callback) => {
+  Events.find({}).then((res) => {
+    callback(null, res);
+  }).catch(err => callback(err));
 };
 
 module.exports = viewQuery;
