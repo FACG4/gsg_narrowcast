@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
-  // startDate: {type:Date , required: false},
-//   endDate: {type:Date , required: false},
+
 
 const eventSchema = mongoose.Schema({
   startDate: Date,

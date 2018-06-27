@@ -20,10 +20,9 @@ exports.get = (req, res, next) => {
         res.end()
     })
     .catch(err => {
+
         res.end()
     })
-
-    
 
     
 };
