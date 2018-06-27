@@ -5,7 +5,7 @@ const deleteQuery = require('../database/queries/delete_events_querie');
 exports.get = (req, res, next) => {
   deleteQuery(req.params.id, (err, result) => {
     // validate
-    if (err) return res.render('error', { error: 'abc', text: err });
+    if (err) return next(err);
     const response = {
       message: 'Event successfully deleted',
       id: req.params.id,
