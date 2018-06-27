@@ -1,7 +1,7 @@
 const Events = require('../event_schema');
 
-const viewQuery = (input, callback) => {
-  Events.find(input).then((res) => {
+const viewQuery = (callback) => {
+  Events.find({}).then((res) => {
     callback(null, res);
   }).catch(err => callback(err));
 };
