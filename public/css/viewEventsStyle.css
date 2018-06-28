@@ -2,17 +2,23 @@
 body {
 margin: 0px;
 padding: 0px;
-height: 100vh;
+height: 100%;
 width: 100%;
+background-image: url("https://files.gitter.im/gsg_narrowcast/Lobby/VXfL/0Z4A0232.JPG");
+background-repeat: no-repeat;
+background-size: cover;
 }
 
+h1 {
+  text-align: center;
+  color:white;
+}
 .container {
 width: 90%;
 display: flex;
 align-self: center;
-justify-content: space-between;
+justify-content: space-around;
 flex-wrap:wrap;
-
 }
 
 
@@ -35,13 +41,15 @@ width: 100%;
 .box {
 display: flex;
 width: 100%;
+height: 150px;
 margin: 0 10px;
 flex-direction: row;
 align-items: center;
 flex: 1;
-background-color: #828282;
+/* background-color: #828282; */
 margin-bottom: 25px;
 margin-left: 90px;
+background-color: #828282;
 }
 
 .imgE{
@@ -51,12 +59,14 @@ width: 250px;
 
 .innerbox {
 display: flex;
-border-radius: 50%;
+/* border-radius: 50%; */
 align-items: center;
 justify-content: center;
-width: 260px;
-height: 260px;
-border: 1px solid #828282;
+width: 50%;
+height: 90%;
+margin-left: 0px;
+margin-right: 0px;
+/* border: 1px solid #828282; */
 }
 
 .innerboxinfo{
@@ -66,9 +76,16 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 width: 260px;
-height: 260px;
-border: 1px solid #828282;
+height: 150px;
 }
+
+/* .innerboxinfo2{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 260px;
+height: 150px;
+} */
 
 .a {
 display: flex;
@@ -89,4 +106,66 @@ border-radius: 10px;
 
 .box p:nth-child(3) {
 color: #752223;
+}
+
+.editBtn{
+font-size:20px;
+height: 50%;
+width: 20%;
+color:white;
+background-color:blue;
+border-radius: 50%;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.viewBtn{
+  font-size:20px;
+  height: 50%;
+  width: 20%;
+  color:white;
+  background-color:green;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.deleteBtn{
+  font-size:20px;
+  height: 50%;
+  width: 20%;
+  color:white;
+  background-color:red;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.addBtn{
+  font-size:48px;
+  color:orange;
+  /* background-color:white; */
+  border-radius: 20%;
+}
+
+.hidden {
+  display: none;
+}
+
+.event--day {
+    height: 40%;
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 9px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.addd{
+  margin-left: 1220px;
+}
+
+.myFont{
+  font-size: 20px;
+  color: white;
 }

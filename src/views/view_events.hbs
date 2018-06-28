@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1> {{this.title}} </h1>
+  <!-- <div class="innerboxinfo2"> -->
+  <div>
+    <h1> {{this.title}} </h1>
+  </div>
+  <div>
+    <a class="addd" href="/events/create"><i class="fa fa-plus-circle addBtn"></i></a>
+  </div>
+  <!-- </div> -->
 <div class="container">
 <div class="boxs">
   {{#each result}}
 <div class="box">
   <div class="innerbox">
-    <a class="a" href="{{this.startDate}}">{{this.startDate}}</a>
+    <span class="hidden-date hidden myFont">{{this.startDate}}</span>
+    <div class="event--day">
+    <span class="month"></span>
+    <span class ="day"></span>
+    </div>
   </div>
   <div class="innerboxinfo">
     <div>
-    <p class="info">{{this.title}}</p>
+    <p class="info myFont">{{this.title}}</p>
   </div>
   <div>
-  <p class="info">{{this.speaker}} </p>
+  <p class="info myFont">{{this.speaker}} </p>
 </div>
   </div>
 
   <div class="innerboxinfo">
     <div>
-    <p class="info">{{this.hall}} </p>
+    <p class="info myFont">{{this.hall}} </p>
   </div>
   <div>
-  <p class="info">{{this.startDate}}  </p>
+  <!-- <p class="info">{{this.startDate}}  </p> -->
+  <h5 class="start-time myFont"></h5>
 </div>
+<p class ="hidden hidden-end">{{this.endDate}}</p>
   </div>
 
   <div class="innerbox">
 
-    <button type="button" name="button"class="editBtn"><a href="/update-event/{{this.id}}">Edit</a></button>
+    <button type="button" name="button"class="editBtn"><a href="/update-event/{{this.id}}"><i class="fa fa-edit"></i></a></button>
 
-    <button type="button" name="button"class="viewBtn"><a href="/view/{{this.id}}">View</a></button>
+    <button type="button" name="button"class="viewBtn"><a href="/view/{{this.id}}"><i class="fa fa-desktop"></i></a></button>
 
-    <button type="button" name="button" id="{{this.id}}" class="deleteBtn">Delete</button>
+    <button type="button" name="button" id="{{this.id}}" class="deleteBtn"><i class="fa fa-trash-o"></i></button>
 
   </div>
 </div>
   {{/each}}
-  <button type="button" name="button"class="addBtn"><a href="/events/create">Add</a></button>
+  <!-- <button type="button" name="button"class="addBtn"><a href="/events/create">Add<i class="fa fa-edit"></i></a></button> -->
 </div>
 </div>
+<link rel="stylesheet" href="/css/style.css">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="/js/dom_functions.js"></script>
 <script src="/js/view_event_page.js"></script>

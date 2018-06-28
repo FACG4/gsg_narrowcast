@@ -1,0 +1,137 @@
+
+.header {
+  overflow: hidden;
+  padding: 10px 20px;
+  height: 80px;
+  background:#009688;
+  box-shadow: 0 1px 15px 0 rgba(192,72,25,0.32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.w3-animate-fading {
+  font-size: 30px;
+  color:white;
+  font-weight: bold;
+  text-shadow:1px 1px #FFEB3B;
+}
+
+.logout{
+  margin-left: 900px;
+}
+
+.navImg .logo {
+  width: 80px;
+  height: 80px;
+  margin-left:20px;
+  margin-top: 10px;
+}
+@media (max-width: 500px);
+}
+.header .w3-animate-fading{
+    float: none;
+    height: 29px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#best{
+  font-family:'Raleway', sans-serif;
+	opacity: .9;
+	font-size: 40px;
+}
+#price{
+	font-family:'Raleway', sans-serif;
+	opacity: .7;
+	font-size: 200%;
+  font-weight: lighter;
+}
+
+.header a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.header a.tweet {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+color: #424242 ;
+text-decoration: underline;
+font-family: monospace;
+font-weight: bold;
+
+}
+
+.header a.active {
+  color: white;
+  font-style: italic;
+
+}
+
+.header-right {
+  float: right;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    background-color: blue;
+    opacity: 0.8;
+    margin-top: 0px;
+}
+
+li {
+    float: left;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.navItems ul li {
+  padding: 10px;
+  margin:20px
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: orange;
+    color:white
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #009688;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin-top:5PX;
+  /* font-family: Roboto; */
+  font-size: 14px;
+  color: white;
+  position: fixed;
+
+}
